@@ -2,21 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, {useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import { navItems, socials } from '../utils/Functions';
 
-const navItems = [
-  { name: 'home', url: '/', id: '1' },
-  { name: 'about', url: '/about', id: '2' },
-  { name: 'skills', url: '/skills', id: '3' },
-  { name: 'projects', url: '/projects', id: '4' },
-  { name: 'contacts', url: '/contacts', id: '5' },
-];
-
-const socials = [
-  { name: 'linkedin', icon: <FaLinkedin />, id: '1' },
-  { name: 'twitter', icon: <FaTwitter />, id: '2' },
-  { name: 'github', icon: <FaGithub />, id: '3' },
-]
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -46,7 +33,7 @@ const Navbar = () => {
       </div>
 
       <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
-        <div className={nav ? 'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-5 ease-in duration-500' : 'fixed left-[-100%] top-0 p-5 ease-in duration-500'}>
+        <div className={nav ? 'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-5 ease-in duration-500' : 'fixed left-[-120%] top-0 p-5 ease-in duration-500'}>
           <div>
             <div className='flex justify-between items-center w-full'>
               <Image src='/../public/assets/skills/firebase.png' width='50' height='20' />
@@ -75,7 +62,7 @@ const Navbar = () => {
                 {
                   socials.map((social) => (
                     <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300' key={social.id}>
-                      {social.icon}
+                      <Link href={social.url} target="_blank">{social.icon}</Link>
                     </div>
                   ))
                 }
