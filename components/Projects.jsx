@@ -12,7 +12,7 @@ const Projects = () => {
       <h2 className="py-4">What I&apos;ve Built</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project) => (
-          <div className="group relative flex justify-center items-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+          <div key={project.id} className="group relative flex justify-center items-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
             <Image
               src={project.img}
               alt={project.name}

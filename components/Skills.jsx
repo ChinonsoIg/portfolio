@@ -18,7 +18,7 @@ const Skills = () => {
             >
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={skill.img} width="64" height="64" alt="HTML" />
+                  <Image src={skill.img} width="64" height="64" alt={skill.name} />
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <h3>{skill.name}</h3>

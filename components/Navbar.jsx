@@ -1,21 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, {useState } from "react";
+import React, {useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { navItems, socials } from "../utils/Functions";
 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   }
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        console.log("true")
+        setShadow(true);
+      } else {
+        console.log("false")
+        setShadow(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleShadow);
+
+  }, [])
+  
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100] bg-white">
+    <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100] bg-white ease-in-out duration-300" : "fixed w-full h-20 z-[100]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl-px-16">
-        <Image src="/../public/assets/skills/firebase.png" width="50" height="20" />
+        <Image src="/../public/assets/skills/firebase.png" alt="Logo" width="50" height="20" />
         <div>
           <ul className="hidden md:flex">
             {
@@ -36,7 +53,7 @@ const Navbar = () => {
         <div className={nav ? "md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-5 ease-in duration-500" : "fixed left-[-120%] top-0 p-5 ease-in duration-500"}>
           <div>
             <div className="flex justify-between items-center w-full">
-              <Image src="/../public/assets/skills/firebase.png" width="50" height="20" />
+              <Image src="/../public/assets/skills/firebase.png" alt="Logo" width="50" height="20" />
               <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer">
                 <AiOutlineClose size={20} />
               </div>
