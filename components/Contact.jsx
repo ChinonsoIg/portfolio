@@ -1,17 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Poppins } from "@next/font/google";
 import React from "react";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { socials } from "../utils/Functions";
+
+const poppins_600 = Poppins({
+  weight: "600",
+  subsets: ["latin"],
+});
+
+const poppins_400 = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
+        <p className={`${poppins_400.className} text-xl tracking-widest uppercase text-[#5651e5]`}>
           Contact
         </p>
-        <h2 className="py-4">Get In Touch</h2>
+        <h2 className={`${poppins_600.className} py-4`}>Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* For the left element */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">

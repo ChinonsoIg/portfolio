@@ -1,6 +1,13 @@
 import Link from "next/link";
+import { Poppins } from "@next/font/google";
 import React from "react";
 import { socials } from "../utils/Functions";
+
+const poppins = Poppins({
+  weight: "600",
+  subsets: ["latin"],
+})
+
 
 const Main = () => {
   return (
@@ -10,10 +17,10 @@ const Main = () => {
           <p className="uppercase text-sm tracking-widest text-gray-600">
             LET&apos;S BUILD SOMETHING TOGETHER
           </p>
-          <h1 className="py-5 text-gray-700">
+          <h1 className={`${poppins.className} py-5 text-gray-700`}>
             Hi, I&apos;m <span className="text-[#5651ef]">Chinonso</span>
           </h1>
-          <h2 className="py-2 text-gray-700">A Front-End Web Developer</h2>
+          <h2 className={`${poppins.className} py-2 text-gray-700 font-bold`}>A Front-End Web Developer</h2>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
             I&apos;m a front-end we dev specialising in building exceptional
             digital experience. I&apos;m focused on building responsive

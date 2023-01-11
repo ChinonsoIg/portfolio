@@ -77,11 +77,10 @@ const SalesInventory = () => {
             </div>
           </div>
         </div>
-        
+
         <p className="underline cursor-pointer py-10 w-max">
           <Link href="/#projects">Back</Link>
         </p>
-
       </div>
     </div>
   );

@@ -1,15 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
-import Navbar from '../components/Navbar'
-import Main from '../components/Main'
-import About from '../components/About'
-import Skills from '../components/Skills'
-import Projects from '../components/Projects'
-import Contact from '../components/Contact'
+import Head from "next/head";
+import { Inter } from "@next/font/google";
+import Main from "../components/Main";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -21,7 +18,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {/* <Navbar /> */}
         <Main />
         <About />
         <Skills />
@@ -29,5 +25,5 @@ export default function Home() {
         <Contact />
       </main>
     </>
-  )
+  );
 }

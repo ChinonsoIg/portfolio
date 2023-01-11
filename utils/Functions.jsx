@@ -39,11 +39,16 @@ export const skills = [
   },
   { name: "React", img: "/../public/assets/skills/react.png", id: "4" },
   { name: "NextJs", img: "/../public/assets/skills/nextjs.png", id: "5" },
-  { name: "NodeJs", img: "/../public/assets/skills/node.png", id: "6" },
-  { name: "MongoDB", img: "/../public/assets/skills/mongo.png", id: "7" },
-  { name: "GitHub", img: "/../public/assets/skills/github.png", id: "8" },
-  // { name: "firebase", img: "/../public/assets/skills/firebase.png", id: "9" },
-  // { name: "react_native", img: "/../public/assets/skills/react_native.png", id: "10" },
+  {
+    name: "TypeScript",
+    img: "/../public/assets/skills/typescript.png",
+    id: "6",
+  },
+  // { name: "NodeJs", img: "/../public/assets/skills/node.png", id: "7" },
+  // { name: "MongoDB", img: "/../public/assets/skills/mongo.png", id: "8" },
+  { name: "GitHub", img: "/../public/assets/skills/github.png", id: "9" },
+  { name: "firebase", img: "/../public/assets/skills/firebase.png", id: "10" },
+  // { name: "react_native", img: "/../public/assets/skills/react_native.png", id: "11" },
 ];
 
 export const projects = [
@@ -111,4 +116,3 @@ export const projects = [
     id: "7",
   },
 ];
-
