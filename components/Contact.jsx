@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Poppins } from "@next/font/google";
 import React from "react";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { HiOutlineChevronDoubleUp, HiPhoneOutgoing, HiOutlineMail } from "react-icons/hi";
 import { socials } from "../utils/Functions";
 
 const poppins_600 = Poppins({
@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className={`${poppins_400.className} text-xl tracking-widest uppercase text-[#5651e5]`}>
+        <p className={`${poppins_400.className} text-xl tracking-widest uppercase text-[#008080]`}>
           Contact
         </p>
         <h2 className={`${poppins_600.className} py-4`}>Get In Touch</h2>
@@ -43,9 +43,17 @@ const Contact = () => {
                   I&apos;m available for freelance or full-time positions.
                   Contact me let&apos;s talk.
                 </p>
+                <p className="flex justify-start items-center gap-3">
+                  <HiOutlineMail color="#001a1a" />
+                  ojononso@yahoo.com
+                </p>
+                <p className="flex justify-start items-center gap-3 py-1">
+                  <HiPhoneOutgoing color="#001a1a" />
+                  +234 708 147 5026
+                </p>
               </div>
               <div>
-                <p className="uppercase pt-8">Connect with Me</p>
+                <p className="uppercase pt-8 text-[#008080]">Connect with Me</p>
                 <div className="flex justify-between items-center max-w-[230px] py-4">
                   {socials.map((social) => (
                     <div
@@ -114,7 +122,7 @@ const Contact = () => {
         <div className="flex justify-center py-12">
           <Link href="/">
             <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <HiOutlineChevronDoubleUp size={30} className="text-[#5651e5]" />
+              <HiOutlineChevronDoubleUp size={30} className="text-[#008080]" />
             </div>
           </Link>
         </div>

@@ -66,14 +66,14 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full 2xl-px-16 px-5">
-        <Link href="/" className={`${alex_brush.className} text-xl text-teal-600`}>
+        <Link href="/" className={`${alex_brush.className} text-xl text-[#008080]`}>
             ChiDev
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             {navItems.map((navItem) => (
               <Link href={`/#${navItem.name}`} key={navItem.id}>
-                <li className="ml-10 text-sm uppercase hover:border-b">
+                <li className="ml-10 text-sm uppercase text-[#001a1a] hover:border-b-2 ease-in-out duration-300">
                   {navItem.name}
                 </li>
               </Link>
@@ -136,7 +136,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="pt-40">
-              <p className="uppercase tracking-widest text-[#5651e5]">
+              <p className="uppercase tracking-widest text-[#008080]">
                 Let&apos;s connect
               </p>
               <div className="flex justify-between items-center my-4 w-full sm:w-[80%]">

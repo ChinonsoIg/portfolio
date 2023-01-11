@@ -17,7 +17,7 @@ const PhotoGrid = () => {
           fill
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">Photo Grid App</h2>
+          <h2 className="py-2 text-white">Photo Grid App</h2>
           <h3>Vue Js</h3>
         </div>
       </div>
@@ -25,7 +25,7 @@ const PhotoGrid = () => {
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
         <div className="col-span-4 md:col-span-3 lg:col-span-4">
           <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className="py-2">Overview</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry"s standard dummy text
