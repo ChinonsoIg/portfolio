@@ -82,9 +82,10 @@ const MyReads = () => {
             </div>
           </div>
         </div>
-        <Link href="/#projects">
-          <p className="underline cursor-pointer py-10">Back</p>
-        </Link>
+        
+        <p className="underline cursor-pointer py-10 w-max">
+          <Link href="/#projects">Back</Link>
+        </p>
       </div>
     </div>
   );

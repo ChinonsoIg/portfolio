@@ -3,15 +3,15 @@ import Link from "next/link";
 import React from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { FiExternalLink } from "react-icons/fi";
-import trakk_website from "../public/assets/projects/trakk_website.png";
+import zebrra from "../public/assets/projects/zebrra.png";
 
-const TrakkWebsite = () => {
+const ZebrraWebsite = () => {
   return (
     <div className="w-full">
       <div className="w-screen h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
-          src={trakk_website}
+          src={zebrra}
           alt="Sales and inventory management"
           className="absolute z-1 object-cover"
           fill
@@ -50,7 +50,7 @@ const TrakkWebsite = () => {
           <div className="flex justify-start items-center gap-3">
             <button className="px-8 py-2 mt-4 mr-8">
               <Link
-                href="https://trakkhq.com"
+                href="https://www.zebrra.com"
                 target="_blank"
                 className="flex justify-between items-center gap-3"
               >
@@ -87,14 +87,10 @@ const TrakkWebsite = () => {
                 <RiRadioButtonFill size={16} className="pr-1" />
                 TypeScript
               </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill size={16} className="pr-1" />
-                Tidio
-              </p>
             </div>
           </div>
         </div>
-        
+
         <p className="underline cursor-pointer py-10 w-max">
           <Link href="/#projects">Back</Link>
         </p>
@@ -103,4 +99,4 @@ const TrakkWebsite = () => {
   );
 };
 
-export default TrakkWebsite;
+export default ZebrraWebsite;
