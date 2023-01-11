@@ -7,8 +7,8 @@ const About = () => {
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">About</p>
-          <p className="py-4">Who I Am</p>
-          <p className="py-2 text-gray-400">// Not your normal developer</p>
+          <h2 className="py-4">Who I Am</h2>
+          <p className="py-2 text-gray-400">// Not your normal developer 😃</p>
           <p className="py-2 text-gray-600">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry"s standard dummy text
