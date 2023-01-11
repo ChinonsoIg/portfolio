@@ -32,10 +32,10 @@ const Projects = () => {
               className="rounded-xl group-hover:opacity-10 ease-in-out duration-300"
             />
             <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <h3 className="text-2xl text-white tracking-wider text-center">{project.name}</h3>
+              <h3 className="text-sm md:text-xl font-normal md:font-bold text-white md:tracking-wider text-center">{project.name}</h3>
               <p className="pb-4 pt-2 text-white text-center">{project.technology}</p>
               <Link href={project.url}>
-                <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">More Info</p>
+                <p className="text-center py-1 md:py-3 rounded-lg bg-white text-gray-700 font-normal md:font-bold text-lg cursor-pointer">More Info</p>
               </Link>
             </div>
           </div>

@@ -25,7 +25,7 @@ const SalesInventory = () => {
         <div className="col-span-4 md:col-span-3 lg:col-span-4">
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
+          <p className="text-justify">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry"s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
