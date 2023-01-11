@@ -31,13 +31,15 @@ const Navbar = () => {
 
   return (
     <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100] bg-white ease-in-out duration-300" : "fixed w-full h-20 z-[100]"}>
-      <div className="flex justify-between items-center w-full h-full px-2 2xl-px-16">
+      <div className="flex justify-between items-center w-full h-full 2xl-px-16 px-5">
+        <Link href="/">
         <Image src="/../public/assets/skills/firebase.png" alt="Logo" width="50" height="20" />
+        </Link>
         <div>
           <ul className="hidden md:flex">
             {
               navItems.map((navItem) => (
-                <Link href={navItem.url} key={navItem.id}>
+                <Link href={`#${navItem.name}`} key={navItem.id}>
                   <li className="ml-10 text-sm uppercase hover:border-b">{navItem.name}</li>
                 </Link>
               ))
@@ -67,7 +69,7 @@ const Navbar = () => {
             <ul >
               {
                 navItems.map((navItem) => (
-                  <Link href={navItem.url} key={navItem.id}>
+                  <Link href={`#${navItem.name}`} key={navItem.id}>
                     <li className="text-sm uppercase py-3">{navItem.name}</li>
                   </Link>
                 ))
