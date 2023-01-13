@@ -88,7 +88,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div onClick={handleNav} className="md:hidden">
-            <AiOutlineMenu size={25} />
+            <AiOutlineMenu size={25} color={linkColor} />
           </div>
         </div>
       </div>
@@ -108,13 +108,8 @@ const Navbar = () => {
         >
           <div>
             <div className="flex justify-between items-center w-full">
-              <Link href="/">
-                <Image
-                  src="/../public/assets/skills/firebase.png"
-                  alt="Logo"
-                  width="50"
-                  height="20"
-                />
+              <Link href="/" className={`${alex_brush.className} text-xl font-bold text-[#008080]`}>
+                ChiDev
               </Link>
               <div
                 onClick={handleNav}
@@ -124,7 +119,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4 text-base">
+              <p className="w-[85%] md:w-[90%] py-4 text-base text-[#001a1a]">
                 Let&apos;s build something legendary together.
               </p>
             </div>
