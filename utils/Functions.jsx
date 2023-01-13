@@ -1,8 +1,19 @@
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
-import html from "../public/assets/skills/html.png"
-import css from "../public/assets/skills/css.png"
-import javascript from "../public/assets/skills/javascript.png"
-import react from "../public/assets/skills/react.png"
+import html from "../public/assets/skills/html.png";
+import css from "../public/assets/skills/css.png";
+import javascript from "../public/assets/skills/javascript.png";
+import react from "../public/assets/skills/react.png";
+import nextjs from "../public/assets/skills/nextjs.png";
+import typescript from "../public/assets/skills/typescript.png";
+import github from "../public/assets/skills/github.png";
+import firebase from "../public/assets/skills/firebase.png";
+import sales_and_inventory_management from "../public/assets/projects/sales_and_inventory_management.png";
+import merchant_dashboard from "../public/assets/projects/merchant_dashboard.png";
+import trakk_website from "../public/assets/projects/trakk_website.png";
+import zebrra from "../public/assets/projects/zebrra.png";
+import photo_grid from "../public/assets/projects/photo_grid.png";
+import would_you_rather_game from "../public/assets/projects/would_you_rather_game.png";
+import myreads_app from "../public/assets/projects/myreads_app.png";
 
 export const navItems = [
   { name: "home", url: "/", id: "1" },
@@ -36,29 +47,21 @@ export const socials = [
 export const skills = [
   { name: "HTML", img: html, id: "1" },
   { name: "CSS", img: css, id: "2" },
-  {
-    name: "JavaScript",
-    img: javascript,
-    id: "3",
-  },
+  { name: "JavaScript",  img: javascript, id: "3" },
   { name: "React", img: react, id: "4" },
-  { name: "NextJs", img: "/../public/assets/skills/nextjs.png", id: "5" },
-  {
-    name: "TypeScript",
-    img: "/../public/assets/skills/typescript.png",
-    id: "6",
-  },
-  // { name: "NodeJs", img: "/../public/assets/skills/node.png", id: "7" },
-  // { name: "MongoDB", img: "/../public/assets/skills/mongo.png", id: "8" },
-  { name: "GitHub", img: "/../public/assets/skills/github.png", id: "9" },
-  { name: "firebase", img: "/../public/assets/skills/firebase.png", id: "10" },
-  // { name: "react_native", img: "/../public/assets/skills/react_native.png", id: "11" },
+  { name: "NextJs", img: nextjs, id: "5" },
+  { name: "TypeScript", img: typescript, id: "6" },
+  // { name: "NodeJs", img: "", id: "7" },
+  // { name: "MongoDB", img: "", id: "8" },
+  { name: "GitHub", img: github, id: "9" },
+  { name: "firebase", img: firebase, id: "10" },
+  // { name: "react_native", img: "", id: "11" },
 ];
 
 export const projects = [
   {
     name: "Sales & Inventory Management System",
-    img: "/../public/assets/projects/sales_and_inventory_management.png",
+    img: sales_and_inventory_management,
     technology: "Next Js",
     url: "/sales-inventory",
     githubUrl: "",
@@ -67,7 +70,7 @@ export const projects = [
   },
   {
     name: "Merchant's Dashboard",
-    img: "/../public/assets/projects/merchant_dashboard.png",
+    img: merchant_dashboard,
     technology: "Next Js",
     url: "merchant-dashboard",
     githubUrl: "",
@@ -76,7 +79,7 @@ export const projects = [
   },
   {
     name: "Trakk Website",
-    img: "/../public/assets/projects/trakk_website.png",
+    img: trakk_website,
     technology: "Next Js",
     url: "trakk-website",
     githubUrl: "",
@@ -85,7 +88,7 @@ export const projects = [
   },
   {
     name: "Zebrra Website",
-    img: "/../public/assets/projects/zebrra.png",
+    img: zebrra,
     technology: "Next Js",
     url: "zebrra-website",
     githubUrl: "",
@@ -94,7 +97,7 @@ export const projects = [
   },
   {
     name: "Photo Grid App",
-    img: "/../public/assets/projects/photo_grid.png",
+    img: photo_grid,
     technology: "Vue Js",
     url: "photo-grid",
     githubUrl: "",
@@ -103,7 +106,7 @@ export const projects = [
   },
   {
     name: "Would You Rather Game",
-    img: "/../public/assets/projects/would_you_rather_game.png",
+    img: would_you_rather_game,
     technology: "React Js",
     url: "would-you-rather",
     githubUrl: "",
@@ -112,7 +115,7 @@ export const projects = [
   },
   {
     name: "Myreads App",
-    img: "/../public/assets/projects/myreads_app.png",
+    img: myreads_app,
     technology: "React Js",
     url: "myreads",
     githubUrl: "",

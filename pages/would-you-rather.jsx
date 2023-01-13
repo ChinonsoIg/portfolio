@@ -28,7 +28,7 @@ const WouldYouRather = () => {
           <h2 className="py-2">Overview</h2>
           <p>
             This is a version of the would you rather game. Users can ask questions and answer any question. For each question asked or answered, a score of 1 is given to the user. To see the score of all the users, you can click on the Leaderboard. <br />
-            This was built with react and state management was redux toolkit. Through this app, I gained useful experience on redux State management.
+            This was built with react and state management with redux toolkit. Through this app, I gained useful experience on redux State management.
           </p>
           <div className="flex justify-start items-center gap-3">
             <button className="px-8 py-2 mt-4 mr-8">

@@ -21,10 +21,12 @@ const Projects = () => {
         Projects
       </p>
       <h2 className={`${poppins_600.className} py-4`}>What I&apos;ve Built</h2>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid 
+      grid-cols-1 
+      md:grid-cols-2 gap-8">
         {projects.map((project) => (
           <div key={project.id} className="group relative flex justify-center items-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 hover:bg-gradient-to-r from-[#008080] to-[#00cccc]">
-            <Image // #5651e5 // #709dff
+            <Image
               src={project.img}
               alt={project.name}
               width="800"

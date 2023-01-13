@@ -29,15 +29,13 @@ const About = () => {
             // Not your normal developer <span className="not-italic">😃</span>
           </p>
           <p className="py-2 text-gray-600">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            PageMaker including versions of Lorem Ipsum
+            A software developer, with keen interest on code workability and efficiency, maintainability and scalability. Highly detailed with strong motivation for success. Ability to leverage on my strong interpersonal skills to build and maintain good working relationships with both co-workers and clients.
           </p>
           <p className="py-2 text-gray-600">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            PageMaker including versions of Lorem Ipsum
+            I prioritise accessibility in all my projects, considering that users may have physical challenges. <br />Being well grinded with  the principles  of responsive  design  with tools like SASS, Bootstrap and Chakra UI, I present my clients with the best user experience. I have successfully built applications with good browser compatibility and SEO optimisation. I leverage my adept knowledge of CSS and JavaScript (including its frameworks/libraries) to deliver aesthetic and equally engaging/interactive interfaces.
           </p>
-          <p className="py-2 text-gray-600 underline cursor-pointer">
-            <Link href="/#projects">Check out some of my latest projetcs</Link>
+          <p className="py-2 underline cursor-pointer w-max text-[#008080]">
+            <Link href="/#projects">Check out some of my latest projects</Link>
           </p>
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex justify-center items-center p-4 hover:scale-105 ease-in duration-300">

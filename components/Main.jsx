@@ -22,9 +22,7 @@ const Main = () => {
           </h1>
           <h2 className={`${poppins.className} py-2 text-gray-700 font-bold`}>A Front-End Web Developer</h2>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
-            I&apos;m a front-end we dev specialising in building exceptional
-            digital experience. I&apos;m focused on building responsive
-            front-end web applications while learning back-end technologies
+            I&apos;m a Front-end Web dev bringing your designs to live, with the required aesthetics.
           </p>
           <div className="flex justify-between items-center max-w-[230px] m-auto py-4">
             {socials.map((social) => (
