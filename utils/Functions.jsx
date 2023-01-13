@@ -1,4 +1,8 @@
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import html from "../public/assets/skills/html.png"
+import css from "../public/assets/skills/css.png"
+import javascript from "../public/assets/skills/javascript.png"
+import react from "../public/assets/skills/react.png"
 
 export const navItems = [
   { name: "home", url: "/", id: "1" },
@@ -30,14 +34,14 @@ export const socials = [
 ];
 
 export const skills = [
-  { name: "HTML", img: "/../public/assets/skills/html.png", id: "1" },
-  { name: "CSS", img: "/../public/assets/skills/css.png", id: "2" },
+  { name: "HTML", img: html, id: "1" },
+  { name: "CSS", img: css, id: "2" },
   {
     name: "JavaScript",
-    img: "/../public/assets/skills/javascript.png",
+    img: javascript,
     id: "3",
   },
-  { name: "React", img: "/../public/assets/skills/react.png", id: "4" },
+  { name: "React", img: react, id: "4" },
   { name: "NextJs", img: "/../public/assets/skills/nextjs.png", id: "5" },
   {
     name: "TypeScript",

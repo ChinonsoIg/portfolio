@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Poppins } from "@next/font/google";
 import React from "react";
 import Link from "next/link";
+import pic from "../public/assets/me/pic.jpeg"
 
 const poppins_600 = Poppins({
   weight: "600",
@@ -29,24 +30,10 @@ const About = () => {
           </p>
           <p className="py-2 text-gray-600">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry"s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum
           </p>
           <p className="py-2 text-gray-600">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry"s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum
           </p>
           <p className="py-2 text-gray-600 underline cursor-pointer">
@@ -55,7 +42,7 @@ const About = () => {
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex justify-center items-center p-4 hover:scale-105 ease-in duration-300">
           <Image
-            src="/../public/assets/me/pic.jpeg"
+            src={pic}
             alt="Me"
             width="350"
             height="400"

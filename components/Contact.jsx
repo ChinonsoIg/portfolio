@@ -4,6 +4,7 @@ import { Poppins } from "@next/font/google";
 import React from "react";
 import { HiOutlineChevronDoubleUp, HiPhoneOutgoing, HiOutlineMail } from "react-icons/hi";
 import { socials } from "../utils/Functions";
+import contact_me from "../public/assets/me/contact_me.png";
 
 const poppins_600 = Poppins({
   weight: "600",
@@ -29,7 +30,7 @@ const Contact = () => {
             <div className="lg:p-4 h-full">
               <div>
                 <Image
-                  src="/../public/assets/me/contact_me.png"
+                  src={contact_me}
                   alt="Contact me"
                   width="500"
                   height="500"
@@ -110,7 +111,7 @@ const Contact = () => {
                   <textarea
                     type="text"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
-                    rows={8}
+                    rows={10}
                   />
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">send message</button>
