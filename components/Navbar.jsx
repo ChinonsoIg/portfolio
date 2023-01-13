@@ -16,7 +16,8 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#1f2937");
+  const [linkColor, setLinkColor] = useState("#001a1a");
+  const [logoColor, setLogoColor] = useState("#008080");
 
   const router = useRouter();
 
@@ -34,21 +35,28 @@ const Navbar = () => {
       router.asPath === "/would-you-rather" ||
       router.asPath === "/myreads"
     ) {
-      setNavBg("transparent");
-      setLinkColor("#f8f8f8");
+      if (shadow) {
+        setNavBg("#ecf0f3");
+        setLinkColor("#001a1a");
+        setLogoColor("#008080")
+      } else {
+        setNavBg("transparent");
+        setLinkColor("#f8f8f8");
+        setLogoColor("#f8f8f8");
+      }
     } else {
       setNavBg("#ecf0f3");
       setLinkColor("#1f2937");
     }
-  }, [router]);
+  }, [router, shadow]);
 
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
-        console.log("true");
+        // console.log("true");
         setShadow(true);
       } else {
-        console.log("false");
+        // console.log("false");
         setShadow(false);
       }
     };
@@ -66,14 +74,14 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full 2xl-px-16 px-5">
-        <Link href="/" className={`${alex_brush.className} text-xl text-[#008080]`}>
-            ChiDev
+        <Link href="/" className={`${alex_brush.className} text-xl font-bold`} style={{ color: logoColor }}>
+          ChiDev
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             {navItems.map((navItem) => (
               <Link href={`/#${navItem.name}`} key={navItem.id}>
-                <li className="ml-10 text-sm uppercase text-[#001a1a] hover:border-b-2 ease-in-out duration-300">
+                <li className="ml-10 text-sm uppercase hover:border-b-2 ease-in-out duration-300">
                   {navItem.name}
                 </li>
               </Link>

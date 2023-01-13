@@ -8,7 +8,7 @@ import photo_grid from "../public/assets/projects/photo_grid.png";
 const PhotoGrid = () => {
   return (
     <div className="w-full">
-      <div className="w-screen h-[30vh] lg:h-[40vh] relative">
+      <div className="w-full h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
           src={photo_grid}
@@ -27,25 +27,10 @@ const PhotoGrid = () => {
           <p>Project</p>
           <h2 className="py-2">Overview</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry"s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum <br />
-            <br />
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry"s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum
+            This sleek UI uses unsplash API to display images of different sizes in columns. When an image is clicked, it will show a pop-up displaying the full image. I took advantage of skeleton loader to present my user with the best UI experience. <br />
+            You can search for pictures of any city/place from around the world.
+            I built this with Vue Js and pure CSS.
+
           </p>
           <div className="flex justify-start items-center gap-3">
             <button className="px-8 py-2 mt-4 mr-8">
@@ -79,10 +64,14 @@ const PhotoGrid = () => {
                 <RiRadioButtonFill size={16} className="pr-1" />
                 Vue Js
               </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill size={16} className="pr-1" />
+                CSS
+              </p>
             </div>
           </div>
         </div>
-        
+
         <p className="underline cursor-pointer py-10 w-max">
           <Link href="/#projects">Back</Link>
         </p>

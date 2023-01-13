@@ -8,7 +8,7 @@ import trakk_website from "../public/assets/projects/trakk_website.png";
 const TrakkWebsite = () => {
   return (
     <div className="w-full">
-      <div className="w-screen h-[30vh] lg:h-[40vh] relative">
+      <div className="w-full h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
           src={trakk_website}
@@ -27,25 +27,7 @@ const TrakkWebsite = () => {
           <p>Project</p>
           <h2 className="py-2">Overview</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry"s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum <br />
-            <br />
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry"s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum
+            Official website of the Trakk app. It's an informational page about the Trakk app. It also has a tracking feature, where a user can enter his/her tracking ID, and see the location of the courier in real time. This feature was implemented with Google map API.
           </p>
           <div className="flex justify-start items-center gap-3">
             <button className="px-8 py-2 mt-4 mr-8">
@@ -94,7 +76,7 @@ const TrakkWebsite = () => {
             </div>
           </div>
         </div>
-        
+
         <p className="underline cursor-pointer py-10 w-max">
           <Link href="/#projects">Back</Link>
         </p>
