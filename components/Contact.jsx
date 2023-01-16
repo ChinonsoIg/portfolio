@@ -3,9 +3,11 @@ import Link from "next/link";
 import { Poppins } from "@next/font/google";
 import React from "react";
 import { HiOutlineChevronDoubleUp, HiPhoneOutgoing, HiOutlineMail } from "react-icons/hi";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { socials } from "../utils/Functions";
 import contact_me from "../public/assets/me/contact_me.png";
-import { getClonableBody } from "next/dist/server/body-streams";
 
 const poppins_600 = Poppins({
   weight: "600",
@@ -18,6 +20,12 @@ const poppins_400 = Poppins({
 });
 
 const Contact = () => {
+  const notifySuccess = () => toast.success("Message sent succesfully", {
+    position: "top-right"
+  });
+  const notifyError = () => toast.error("An error occured!", {
+    position: "top-right"
+  });
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -39,6 +47,9 @@ const Contact = () => {
     const result = await response.json();
     if (result.success) {
       console.log(result);
+      notifySuccess();
+    } else {
+      notifyError();
     }
   }
 
@@ -149,6 +160,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
+        <ToastContainer position="top-center" />
 
         <div className="flex justify-center py-12">
           <Link href="/">
