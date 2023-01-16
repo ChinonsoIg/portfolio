@@ -5,6 +5,7 @@ import React from "react";
 import { HiOutlineChevronDoubleUp, HiPhoneOutgoing, HiOutlineMail } from "react-icons/hi";
 import { socials } from "../utils/Functions";
 import contact_me from "../public/assets/me/contact_me.png";
+import { getClonableBody } from "next/dist/server/body-streams";
 
 const poppins_600 = Poppins({
   weight: "600",
@@ -17,6 +18,31 @@ const poppins_400 = Poppins({
 });
 
 const Contact = () => {
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    console.log("E: ", e.target)
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "bf3dcb82-d8ba-4102-b780-a9de7365084f",
+        name: e.target.name.value,
+        phoneNumber: e.target.phoneNumber.value,
+        email: e.target.email.value,
+        message: e.target.message.value,
+      }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      console.log(result);
+    }
+  }
+
+
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -74,47 +100,51 @@ const Contact = () => {
           {/* Right element */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form action="">
+              <form onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
-                    <label htmlFor="" className="uppercase text-sm py-2">
+                    <label htmlFor="name" className="uppercase text-sm py-2">
                       Name
                     </label>
                     <input
                       type="text"
-                      className="border-2 rounded-lg p-3 flex border-gray-300 "
+                      name="name"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="" className="uppercase text-sm py-2">
+                    <label htmlFor="phoneNumber" className="uppercase text-sm py-2">
                       Phone number
                     </label>
                     <input
                       type="text"
-                      className="border-2 rounded-lg p-3 flex border-gray-300 "
+                      name="phoneNumber"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
                     />
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label htmlFor="" className="uppercase text-sm py-2">
+                  <label htmlFor="email" className="uppercase text-sm py-2">
                     Email
                   </label>
                   <input
                     type="email"
-                    className="border-2 rounded-lg p-3 flex border-gray-300 "
+                    name="email"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label htmlFor="" className="uppercase text-sm py-2">
+                  <label htmlFor="message" className="uppercase text-sm py-2">
                     Message
                   </label>
                   <textarea
                     type="text"
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    name="message"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
                     rows={10}
                   />
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">send message</button>
+                <button type="submit" className="w-full p-4 mt-4 bg-gradient-to-r from-[#008080] to-[#00cccc] text-white">Send Message</button>
               </form>
             </div>
           </div>
