@@ -29,7 +29,7 @@ const Contact = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("E: ", e.target)
+    // console.log("E: ", e.target)
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -46,7 +46,7 @@ const Contact = () => {
     });
     const result = await response.json();
     if (result.success) {
-      console.log(result);
+      // console.log(result);
       notifySuccess();
     } else {
       notifyError();
