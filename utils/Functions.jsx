@@ -9,8 +9,6 @@ import github from "../public/assets/skills/github.png";
 import firebase from "../public/assets/skills/firebase.png";
 import sales_and_inventory_management from "../public/assets/projects/sales_and_inventory_management.png";
 import merchant_dashboard from "../public/assets/projects/merchant_dashboard.png";
-import trakk_website from "../public/assets/projects/trakk_website.png";
-import zebrra from "../public/assets/projects/zebrra.png";
 import photo_grid from "../public/assets/projects/photo_grid.png";
 import would_you_rather_game from "../public/assets/projects/would_you_rather_game.png";
 import myreads_app from "../public/assets/projects/myreads_app.png";
@@ -78,31 +76,13 @@ export const projects = [
     id: "2",
   },
   {
-    name: "Trakk Website",
-    img: trakk_website,
-    technology: "Next Js",
-    url: "trakk-website",
-    githubUrl: "",
-    liveUrl: "",
-    id: "3",
-  },
-  {
-    name: "Zebrra Website",
-    img: zebrra,
-    technology: "Next Js",
-    url: "zebrra-website",
-    githubUrl: "",
-    liveUrl: "",
-    id: "4",
-  },
-  {
     name: "Photo Grid App",
     img: photo_grid,
     technology: "Vue Js",
     url: "photo-grid",
     githubUrl: "",
     liveUrl: "",
-    id: "5",
+    id: "3",
   },
   {
     name: "Would You Rather Game",
@@ -111,7 +91,7 @@ export const projects = [
     url: "would-you-rather",
     githubUrl: "",
     liveUrl: "",
-    id: "6",
+    id: "4",
   },
   {
     name: "Myreads App",
@@ -120,6 +100,6 @@ export const projects = [
     url: "myreads",
     githubUrl: "",
     liveUrl: "",
-    id: "7",
+    id: "5",
   },
 ];

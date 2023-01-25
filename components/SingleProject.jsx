@@ -3,22 +3,26 @@ import Link from "next/link";
 import React from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { FiExternalLink } from "react-icons/fi";
-import trakk_website from "../public/assets/projects/trakk_website.png";
 
-const TrakkWebsite = () => {
+const SingleProject = ({ image, title, details, liveURL, githubURL, stacks, technologies }) => {
+
   return (
     <div className="w-full">
       <div className="w-full h-[30vh] lg:h-[40vh] relative">
         <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
-          src={trakk_website}
+          src={image}
           alt="Sales and inventory management"
-          className="absolute z-1 object-cover"
+          className="absolute z-1 object-cover w-full"
           fill
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2 text-white">Trakk Website</h2>
-          <h3>Next Js / Chakra UI / TypeScript</h3>
+          <h2 className="py-2 text-white">{title}</h2>
+          <h3>
+            {stacks.map((stack) => (
+              <span className="mr-3 after:content-['/'] after:ml-3 last-of-type:after:content-none">{stack.name}</span>
+            ))}
+          </h3>
         </div>
       </div>
 
@@ -26,13 +30,11 @@ const TrakkWebsite = () => {
         <div className="col-span-4 md:col-span-3 lg:col-span-4">
           <p>Project</p>
           <h2 className="py-2">Overview</h2>
-          <p>
-            Official website of the Trakk app. It's an informational page about the Trakk app. It also has a tracking feature, where a user can enter his/her tracking ID, and see the location of the courier in real time. This feature was implemented with Google map API.
-          </p>
+          <p>{details}</p>
           <div className="flex justify-start items-center gap-3">
             <button className="px-8 py-2 mt-4 mr-8">
               <Link
-                href="https://trakkhq.com"
+                href={liveURL}
                 target="_blank"
                 className="flex justify-between items-center gap-3"
               >
@@ -40,16 +42,16 @@ const TrakkWebsite = () => {
                 <FiExternalLink />
               </Link>
             </button>
-            {/* <button className="px-8 py-2 mt-4">
+            <button className={githubURL === "" ? "hidden" : "px-8 py-2 mt-4 inline-block"}>
               <Link
-                href="https://github.com/ChinonsoIg/myreads"
+                href={githubURL}
                 target="_blank"
                 className="flex justify-between items-center gap-3"
               >
                 Code
                 <FiExternalLink />
               </Link>
-            </button> */}
+            </button>
           </div>
         </div>
 
@@ -57,22 +59,12 @@ const TrakkWebsite = () => {
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-col-3 md:grid-cols-1">
-              <p className="text-gray-600 py-2 flex items-center">
+              {technologies.map((tech) => (
+              <p className="text-gray-600 py-2 flex items-center" key={tech.key}>
                 <RiRadioButtonFill size={16} className="pr-1" />
-                Next Js
+                {tech.name}
               </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill size={16} className="pr-1" />
-                Chakra UI
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill size={16} className="pr-1" />
-                TypeScript
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill size={16} className="pr-1" />
-                Tidio
-              </p>
+              ))}
             </div>
           </div>
         </div>
@@ -85,4 +77,4 @@ const TrakkWebsite = () => {
   );
 };
 
-export default TrakkWebsite;
+export default SingleProject;
