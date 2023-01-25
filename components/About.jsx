@@ -2,8 +2,7 @@ import Image from "next/image";
 import { Poppins } from "@next/font/google";
 import Link from "next/link";
 import { useInView } from "framer-motion";
-import React, { useRef } from "react";
-// import { useInView } from "react-intersection-observer";
+import { useRef } from "react";
 
 import pic from "../public/assets/me/pic.jpeg"
 
@@ -20,6 +19,7 @@ const poppins_400 = Poppins({
 const About = () => {
 
   const aboutRef = useRef(null);
+  const headerRef = useRef(null);
   const devRef = useRef(null);
   const para1Ref = useRef(null);
   const para2Ref = useRef(null);
@@ -27,6 +27,7 @@ const About = () => {
   const imgRef = useRef(null);
 
   const aboutIsInView = useInView(aboutRef, { once: true });
+  const headerIsInView = useInView(headerRef, { once: true });
   const devIsInView = useInView(devRef, { once: true });
   const para1IsInView = useInView(para1Ref, { once: true });
   const para2IsInView = useInView(para2Ref, { once: true });
@@ -36,7 +37,9 @@ const About = () => {
 
   return (
     <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8" style={{ overflowX: "hidden" }}>
+      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8" 
+      style={{ overflowX: !imgIsInView ? "hidden" : null }}
+    >
 
         <div className="col-span-2">
           <p
@@ -51,10 +54,10 @@ const About = () => {
             About
           </p>
           <h2 className={`${poppins_600.className} py-4`}
-            ref={aboutRef}
+            ref={headerRef}
             style={{
-              transform: aboutIsInView ? "none" : "translateX(-200px)",
-              opacity: aboutIsInView ? 1 : 0,
+              transform: headerIsInView ? "none" : "translateX(-200px)",
+              opacity: headerIsInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
             }}
           >Who I Am</h2>
