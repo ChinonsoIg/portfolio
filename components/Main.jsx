@@ -16,10 +16,10 @@ const Main = () => {
         <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
           <div>
             <motion.div
-              initial={{ opacity: 0, y: -15 }}
+              initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              exist={{ opacity: 0, y: 15 }}
-              transition={{ delay: 0.25 }}
+              exist={{ opacity: 0, y: 50 }}
+              transition={{ type: "spring", stiffness: 320, delay: 0.25 }}
             >
               <p className="uppercase text-xs md:text-sm tracking-widest text-gray-600">
                 LET&apos;S BUILD SOMETHING TOGETHER
@@ -30,7 +30,7 @@ const Main = () => {
               initial={{ opacity: 0, x: 15 }}
               animate={{ opacity: 1, x: 0 }}
               exist={{ opacity: 0, x: 15 }}
-              transition={{ delay: 0.65, duration: 0.85 }}
+              transition={{ delay: 1.25, duration: 0.85 }}
             >
             <h1 className={`${poppins.className} py-5 text-gray-700`}>
               Hi, I&apos;m <span className="text-[#008080]">Chinonso</span>
@@ -41,7 +41,7 @@ const Main = () => {
               initial={{ opacity: 0, x: 15 }}
               animate={{ opacity: 1, x: 0 }}
               exist={{ opacity: 0, x: 15 }}
-              transition={{ delay: 1.65, duration: 1.45 }}
+              transition={{ delay: 2.25, duration: 1.45 }}
             >
             <h2 className={`${poppins.className} py-2 text-gray-700 font-bold`}>A Front-End Web Developer</h2>
             </motion.div>
@@ -50,7 +50,7 @@ const Main = () => {
               initial={{ opacity: 0, x: 15 }}
               animate={{ opacity: 1, x: 0 }}
               exist={{ opacity: 0, x: 15 }}
-              transition={{ delay: 2.65, duration: 1.85 }}
+              transition={{ delay: 3.85, duration: 1.85 }}
             >
             <p className="py-4 text-gray-600 max-w-[70%] m-auto">
               I&apos;m a Front-end Web dev bringing your designs to live, with the required aesthetics.
@@ -58,10 +58,10 @@ const Main = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              exist={{ opacity: 0, y: 15 }}
-              transition={{ delay: 3.65, duration: 1.85 }}
+              exist={{ opacity: 0, y: 30 }}
+              transition={{ delay: 5.85, duration: 1.85 }}
             >
               <div className="flex justify-between items-center max-w-[230px] m-auto py-4">
                 {socials.map((social) => (
