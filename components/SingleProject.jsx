@@ -32,7 +32,7 @@ const SingleProject = ({ image, title, details, liveURL, githubURL, stacks, tech
           <h2 className="py-2">Overview</h2>
           <p>{details}</p>
           <div className="flex justify-start items-center gap-3">
-            <button className="px-8 py-2 mt-4 mr-8">
+            <button className={liveURL === "" ? "hidden" : "px-8 py-2 mt-4 mr-8 inline-block"}>
               <Link
                 href={liveURL}
                 target="_blank"
