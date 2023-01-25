@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Poppins } from "@next/font/google";
-import React from "react";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+
 import { projects } from "../utils/Functions";
 
 const poppins_600 = Poppins({
@@ -15,12 +17,32 @@ const poppins_400 = Poppins({
 });
 
 const Projects = () => {
+  const projectsRef = useRef(null);
+  const headerRef = useRef(null);
+
+  const projectsIsInView = useInView(projectsRef, { once: true });
+  const headerIsInView = useInView(headerRef, { once: true });
+
   return (
     <div id="projects" className="max-w-[1240px] mx-auto px-2 py-16 ">
-      <p className={`${poppins_400.className} uppercase text-xl tracking-widest text-[#008080]`}>
+      <p className={`${poppins_400.className} uppercase text-xl tracking-widest text-[#008080]`}
+      ref={projectsRef}
+      style={{
+        transform: projectsIsInView ? "none" : "translateX(-200px)",
+        opacity: projectsIsInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+      }}
+      >
         Projects
       </p>
-      <h2 className={`${poppins_600.className} py-4`}>What I&apos;ve Built</h2>
+      <h2 className={`${poppins_600.className} py-4`}
+      ref={headerRef}
+      style={{
+        transform: headerIsInView ? "none" : "translateX(-200px)",
+        opacity: headerIsInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+      }}
+      >What I&apos;ve Built</h2>
       <div className="grid 
       grid-cols-1 
       md:grid-cols-2 gap-8">
