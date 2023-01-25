@@ -6,12 +6,15 @@ import react from "../public/assets/skills/react.png";
 import nextjs from "../public/assets/skills/nextjs.png";
 import typescript from "../public/assets/skills/typescript.png";
 import github from "../public/assets/skills/github.png";
+import mongo from "../public/assets/skills/mongo.png";
+import node from "../public/assets/skills/node.png";
 import firebase from "../public/assets/skills/firebase.png";
 import sales_and_inventory_management from "../public/assets/projects/sales_and_inventory_management.png";
 import merchant_dashboard from "../public/assets/projects/merchant_dashboard.png";
 import photo_grid from "../public/assets/projects/photo_grid.png";
 import would_you_rather_game from "../public/assets/projects/would_you_rather_game.png";
 import myreads_app from "../public/assets/projects/myreads_app.png";
+
 
 export const navItems = [
   { name: "home", url: "/", id: "1" },
@@ -43,16 +46,16 @@ export const socials = [
 ];
 
 export const skills = [
-  { name: "HTML", img: html, id: "1" },
-  { name: "CSS", img: css, id: "2" },
+  // { name: "HTML", img: html, id: "1" },
+  // { name: "CSS", img: css, id: "2" },
   { name: "JavaScript",  img: javascript, id: "3" },
   { name: "React", img: react, id: "4" },
   { name: "NextJs", img: nextjs, id: "5" },
   { name: "TypeScript", img: typescript, id: "6" },
-  // { name: "NodeJs", img: "", id: "7" },
-  // { name: "MongoDB", img: "", id: "8" },
+  { name: "NodeJs", img: node, id: "7" },
+  { name: "MongoDB", img: mongo, id: "8" },
   { name: "GitHub", img: github, id: "9" },
-  { name: "firebase", img: firebase, id: "10" },
+  { name: "Firebase", img: firebase, id: "10" },
   // { name: "react_native", img: "", id: "11" },
 ];
 
