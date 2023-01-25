@@ -16,9 +16,9 @@ const Main = () => {
         <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
           <div>
             <motion.div
-              initial={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
-              exist={{ opacity: 0, y: 50 }}
+              exist={{ opacity: 0, y: 100 }}
               transition={{ type: "spring", stiffness: 320, delay: 0.25 }}
             >
               <p className="uppercase text-xs md:text-sm tracking-widest text-gray-600">
@@ -27,9 +27,9 @@ const Main = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 15 }}
+              initial={{ opacity: 0, x: 55 }}
               animate={{ opacity: 1, x: 0 }}
-              exist={{ opacity: 0, x: 15 }}
+              exist={{ opacity: 0, x: 55 }}
               transition={{ delay: 1.25, duration: 0.85 }}
             >
             <h1 className={`${poppins.className} py-5 text-gray-700`}>
@@ -38,18 +38,18 @@ const Main = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 15 }}
+              initial={{ opacity: 0, x: 55 }}
               animate={{ opacity: 1, x: 0 }}
-              exist={{ opacity: 0, x: 15 }}
+              exist={{ opacity: 0, x: 55 }}
               transition={{ delay: 2.25, duration: 1.45 }}
             >
             <h2 className={`${poppins.className} py-2 text-gray-700 font-bold`}>A Front-End Web Developer</h2>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 15 }}
+              initial={{ opacity: 0, x: 55 }}
               animate={{ opacity: 1, x: 0 }}
-              exist={{ opacity: 0, x: 15 }}
+              exist={{ opacity: 0, x: 55 }}
               transition={{ delay: 3.85, duration: 1.85 }}
             >
             <p className="py-4 text-gray-600 max-w-[70%] m-auto">

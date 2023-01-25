@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Poppins } from "@next/font/google";
-import React from "react";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import { HiOutlineChevronDoubleUp, HiPhoneOutgoing, HiOutlineMail } from "react-icons/hi";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,6 +21,17 @@ const poppins_400 = Poppins({
 });
 
 const Contact = () => {
+  const contactRef = useRef(null);
+  const headerRef = useRef(null);
+  const leftBoxRef = useRef(null);
+  const rightBoxRef = useRef(null);
+
+  const contactIsInView = useInView(contactRef, { once: true });
+  const headerIsInView = useInView(headerRef, { once: true });
+  const leftBoxIsInView = useInView(leftBoxRef, { once: true });
+  const rightBoxIsInView = useInView(rightBoxRef, { once: true });
+
+
   const notifySuccess = () => toast.success("Message sent succesfully", {
     position: "top-right"
   });
@@ -56,14 +68,38 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full lg:h-min-content">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className={`${poppins_400.className} text-xl tracking-widest uppercase text-[#008080]`}>
+      <div className="max-w-[1240px] m-auto px-2 py-16 w-full"
+      style={{ overflowX: (!leftBoxIsInView || !rightBoxIsInView) ? "hidden" : null }}
+      >
+        <p className={`${poppins_400.className} text-xl tracking-widest uppercase text-[#008080]`}
+        ref={contactRef}
+        style={{
+          transform: contactIsInView ? "none" : "translateX(-200px)",
+          opacity: contactIsInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+        }}
+        >
           Contact
         </p>
-        <h2 className={`${poppins_600.className} py-4`}>Get In Touch</h2>
+        <h2 className={`${poppins_600.className} py-4`}
+        ref={headerRef}
+        style={{
+          transform: headerIsInView ? "none" : "translateX(-200px)",
+          opacity: headerIsInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+        }}
+        >Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
+
           {/* For the left element */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4"
+          ref={leftBoxRef}
+          style={{
+            transform: leftBoxIsInView ? "none" : "translateX(-200px)",
+            opacity: leftBoxIsInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          }}
+          >
             <div className="lg:p-4 h-full">
               <div>
                 <Image
@@ -109,7 +145,14 @@ const Contact = () => {
           </div>
 
           {/* Right element */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4"
+          ref={rightBoxRef}
+          style={{
+            transform: rightBoxIsInView ? "none" : "translateX(200px)",
+            opacity: rightBoxIsInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          }}
+          >
             <div className="p-4">
               <form onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
