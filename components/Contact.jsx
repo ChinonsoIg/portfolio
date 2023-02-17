@@ -169,7 +169,6 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <label htmlFor="name" className="uppercase text-sm py-2">
                       Name
-                    {/* </label> */}
                     <input
                       type="text"
                       name="name"
@@ -180,7 +179,6 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <label htmlFor="phoneNumber" className="uppercase text-sm py-2">
                       Phone number
-                    {/* </label> */}
                     <input
                       type="text"
                       name="phoneNumber"
@@ -192,7 +190,6 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label htmlFor="email" className="uppercase text-sm py-2">
                     Email
-                  {/* </label> */}
                   <input
                     type="email"
                     name="email"
@@ -202,8 +199,6 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col py-2">
                   <label htmlFor="message" className="uppercase text-sm py-2">
-                    Message
-                  {/* </label> */}
                   <textarea
                     type="text"
                     name="message"
