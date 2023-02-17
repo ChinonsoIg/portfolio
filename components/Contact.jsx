@@ -169,44 +169,48 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <label htmlFor="name" className="uppercase text-sm py-2">
                       Name
-                    </label>
+                    {/* </label> */}
                     <input
                       type="text"
                       name="name"
-                      className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none w-full"
                     />
+                    </label>
                   </div>
                   <div className="flex flex-col">
                     <label htmlFor="phoneNumber" className="uppercase text-sm py-2">
                       Phone number
-                    </label>
+                    {/* </label> */}
                     <input
                       type="text"
                       name="phoneNumber"
-                      className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none w-full"
                     />
+                    </label>
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
                   <label htmlFor="email" className="uppercase text-sm py-2">
                     Email
-                  </label>
+                  {/* </label> */}
                   <input
                     type="email"
                     name="email"
-                    className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none w-full"
                   />
+                  </label>
                 </div>
                 <div className="flex flex-col py-2">
                   <label htmlFor="message" className="uppercase text-sm py-2">
                     Message
-                  </label>
+                  {/* </label> */}
                   <textarea
                     type="text"
                     name="message"
-                    className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 focus:border-teal-500 focus:outline-none w-full"
                     rows={10}
                   />
+                  </label>
                 </div>
                 <button type="submit" className="w-full p-4 mt-4 bg-gradient-to-r from-[#008080] to-[#00cccc] text-white">Send Message</button>
               </form>
