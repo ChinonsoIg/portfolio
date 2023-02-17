@@ -10,6 +10,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { socials } from "../utils/Functions";
 import contact_me from "../public/assets/me/contact_me.png";
 
+const formURL = process.env.NEXT_PUBLIC_FORM_URL;
+const accessKey = process.env.NEXT_PUBLIC_FORM_ACCESS_KEY;
+
 const poppins_600 = Poppins({
   weight: "600",
   subsets: ["latin"],
@@ -35,21 +38,28 @@ const Contact = () => {
   const notifySuccess = () => toast.success("Message sent succesfully", {
     position: "top-right"
   });
-  const notifyError = () => toast.error("An error occured!", {
+  const notifyError = (err) => toast.error(err, {
     position: "top-right"
   });
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // console.log("E: ", e.target)
-    const response = await fetch("https://api.web3forms.com/submit", {
+    console.log("E: ", e.target)
+    if (e.target.name.value === "" ||
+      e.target.phoneNumber.value === "" ||
+      e.target.email.value === "" ||
+      e.target.message.value === ""
+      ) {
+      return notifyError("Input fields cannot be empty.");
+    }
+    const response = await fetch(formURL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "bf3dcb82-d8ba-4102-b780-a9de7365084f",
+        access_key: accessKey,
         name: e.target.name.value,
         phoneNumber: e.target.phoneNumber.value,
         email: e.target.email.value,
@@ -58,10 +68,10 @@ const Contact = () => {
     });
     const result = await response.json();
     if (result.success) {
-      // console.log(result);
+      console.log(result);
       notifySuccess();
     } else {
-      notifyError();
+      notifyError("An error occured!");
     }
   }
 
