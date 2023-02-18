@@ -80,11 +80,22 @@ const Navbar = () => {
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             {navItems.map((navItem) => (
-              <Link href={`/#${navItem.name}`} key={navItem.id}>
-                <li className="ml-10 text-sm uppercase hover:border-b-2 ease-in-out duration-300">
+              // <Link href={`/#${navItem.name}`} key={navItem.id}>
+              //   <li className="ml-10 text-sm uppercase hover:border-b-2 ease-in-out duration-300">
+              //     {navItem.name}
+              //   </li>
+              // </Link>
+              // <Link href={`/#${navItem.name}`} key={navItem.id}>
+              <li
+                onClick={() => setNav(false)}
+                className="ml-10 text-sm uppercase hover:border-b-2 ease-in-out duration-300"
+                key={navItem.id}
+              >
+                <Link href={`/#${navItem.name}`} className="w-full" >
                   {navItem.name}
-                </li>
-              </Link>
+                </Link>
+              </li>
+              // </Link>
             ))}
           </ul>
           <div onClick={handleNav} className="md:hidden">
@@ -128,14 +139,17 @@ const Navbar = () => {
           <div className="py-4 flex flex-col text-left">
             <ul>
               {navItems.map((navItem) => (
-                <Link href={`/#${navItem.name}`} key={navItem.id}>
-                  <li
-                    onClick={() => setNav(false)}
-                    className="text-sm uppercase py-3"
-                  >
+                // <Link href={`/#${navItem.name}`} key={navItem.id}>
+                <li
+                  onClick={() => setNav(false)}
+                  className="text-sm uppercase py-3"
+                  key={navItem.id}
+                >
+                  <Link href={`/#${navItem.name}`} className="w-full" >
                     {navItem.name}
-                  </li>
-                </Link>
+                  </Link>
+                </li>
+                // </Link>
               ))}
             </ul>
             <div className="pt-40">
