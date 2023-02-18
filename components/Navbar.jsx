@@ -74,28 +74,21 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full 2xl-px-16 px-5">
-        <Link href="/" className={`${alex_brush.className} text-xl font-bold`} style={{ color: logoColor }}>
+        <Link href="/" className={`${alex_brush.className} text-xl font-bold`} style={{ color: logoColor }} aria-label="Go to home page">
           ChiDev
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             {navItems.map((navItem) => (
-              // <Link href={`/#${navItem.name}`} key={navItem.id}>
-              //   <li className="ml-10 text-sm uppercase hover:border-b-2 ease-in-out duration-300">
-              //     {navItem.name}
-              //   </li>
-              // </Link>
-              // <Link href={`/#${navItem.name}`} key={navItem.id}>
               <li
                 onClick={() => setNav(false)}
                 className="ml-10 text-sm uppercase hover:border-b-2 ease-in-out duration-300"
                 key={navItem.id}
               >
-                <Link href={`/#${navItem.name}`} className="w-full" >
+                <Link href={`/#${navItem.name}`} className="w-full" aria-label={`Go to ${navItem.name} section`}>
                   {navItem.name}
                 </Link>
               </li>
-              // </Link>
             ))}
           </ul>
           <div onClick={handleNav} className="md:hidden">
@@ -119,7 +112,7 @@ const Navbar = () => {
         >
           <div>
             <div className="flex justify-between items-center w-full">
-              <Link href="/" className={`${alex_brush.className} text-xl font-bold text-[#008080]`}>
+              <Link href="/" className={`${alex_brush.className} text-xl font-bold text-[#008080]`} aria-label="Go to home page">
                 ChiDev
               </Link>
               <div
@@ -139,17 +132,15 @@ const Navbar = () => {
           <div className="py-4 flex flex-col text-left">
             <ul>
               {navItems.map((navItem) => (
-                // <Link href={`/#${navItem.name}`} key={navItem.id}>
                 <li
                   onClick={() => setNav(false)}
                   className="text-sm uppercase py-3"
                   key={navItem.id}
                 >
-                  <Link href={`/#${navItem.name}`} className="w-full" >
+                  <Link href={`/#${navItem.name}`} className="w-full" aria-label={`Go to ${navItem.name} section`}>
                     {navItem.name}
                   </Link>
                 </li>
-                // </Link>
               ))}
             </ul>
             <div className="pt-40">
@@ -162,7 +153,7 @@ const Navbar = () => {
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
                     key={social.id}
                   >
-                    <Link href={social.url} target="_blank">
+                    <Link href={social.url} target="_blank" aria-label={`Let's connect on ${social.name}`}>
                       {social.icon}
                     </Link>
                   </div>
