@@ -30,7 +30,7 @@ const MerchantDashboard = () => {
       image={merchant_dashboard}
       title="Merchant Dashboard"
       details={details}
-      liveURL="https://dashboard.trakkhq.com/"
+      liveURL=""
       githubURL=""
       stacks={stacks}
       technologies={technologies}
