@@ -78,7 +78,7 @@ const About = () => {
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
             }}
           >
-            A software developer, with keen interest on code workability and efficiency, maintainability and scalability. Highly detailed with strong motivation for success. Ability to leverage on my strong interpersonal skills to build and maintain good working relationships with both co-workers and clients.
+            A software developer, with over a year experience in shipping softwares with React.js, Next.js and Typescript. Highly detailed with strong motivation for success. Ability to leverage on my strong interpersonal skills to build and maintain good working relationships with both co-workers and clients.
           </p>
           <p className="py-2 text-gray-600"
           ref={para2Ref}
@@ -88,7 +88,7 @@ const About = () => {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
           }}
           >
-            I prioritise accessibility in all my projects, considering that users may have physical challenges. <br />Being well grinded with  the principles  of responsive  design  with tools like SASS, Bootstrap and Chakra UI, I present my clients with the best user experience. I have successfully built applications with good browser compatibility and SEO optimisation. I leverage my adept knowledge of CSS and JavaScript (including its frameworks/libraries) to deliver aesthetic and equally engaging/interactive interfaces.
+            I prioritise accessibility in all my projects, hence my web apps conform with the WAI-ARIA standards. <br />Being well grounded in the principles  of responsive  design  with tools like SASS, Bootstrap, TailwindCSS and Chakra UI, I present my clients with the best user experience. I have successfully built applications with good browser compatibility and SEO.
           </p>
           <p className="py-2 underline cursor-pointer w-max text-[#008080]"
           ref={checkOutRef}
@@ -112,7 +112,7 @@ const About = () => {
         >
           <Image
             src={pic}
-            alt="Me"
+            alt="Chinonso"
             width="350"
             height="400"
             style={{ borderRadius: "8px" }}
