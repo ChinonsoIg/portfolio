@@ -6,7 +6,7 @@ import { FiExternalLink } from "react-icons/fi";
 
 const SingleProject = ({ image, title, details, liveURL, githubURL, stacks, technologies }) => {
 
-  console.log("live: ", liveURL)
+  // console.log("live: ", liveURL)
 
   return (
     <div className="w-full">

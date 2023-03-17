@@ -5,33 +5,29 @@ const MerchantDashboard = () => {
 
   const details = 
     <>
-      This is a data heavy app - the dashboard for the Trakk logistics app. It displays operational information and statistics about the company. It contains information about their riders, their vehicles, and all deliveries. There is also a feature to suspend and unsuspend a rider, and to set price for trips (done through some calculations depending on the distance and traffic situation). <br />
-      On the home page, you'll see a lot of pie charts, done with Recharts.
-      This app was built with NextJs, Typescript, GraphQL Chakra UI, and a Strapi backend. <br />
-      I gained hands-on experience on the techniques of data fetching using GraphQL, and data display using Recharts.
+      This is a data heavy app - the dashboard for my E-commerce web application. It displays operational information and statistics about the company. It contains information about their products and the number of sales they've made. There is also a form to upload a new product, or edit an existing one. <br />
+      This app is built with NextJs, Javacript, Sass, and tested with React Testing Library. The backend was also built by me using Node.js, Express and MongoDB.
     </>
 
     const stacks = [
       { id: "1", name: "Next Js" },
-      { id: "2", name: "Chakra UI" },
-      { id: "3", name: "TypeScript" },
+      { id: "2", name: "Sass" },
     ];
 
     const technologies = [
       { id: "1", name: "Next Js" },
-      { id: "2", name: "Chakra UI" },
-      { id: "3", name: "TypeScript" },
-      { id: "4", name: "Context API" },
-      { id: "5", name: "GraphQL" }
+      { id: "2", name: "Sass" },
+      { id: "4", name: "Next Auth" },
+      { id: "4", name: "React Testing Library" }
     ];
 
   return (
     <SingleProject
       image={merchant_dashboard}
-      title="Merchant Dashboard"
+      title="E-commerce Merchant Dashboard"
       details={details}
-      liveURL=""
-      githubURL=""
+      liveURL="https://female-suave-merchants.vercel.app/"
+      githubURL="https://github.com/ChinonsoIg/female-suave-merchants"
       stacks={stacks}
       technologies={technologies}
     />

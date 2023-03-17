@@ -70,12 +70,12 @@ export const projects = [
     id: "1",
   },
   {
-    name: "Merchant's Dashboard",
+    name: "E-commerce Merchant's Dashboard",
     img: merchant_dashboard,
     technology: "Next Js",
     url: "merchant-dashboard",
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/ChinonsoIg/female-suave-merchants",
+    liveUrl: "https://female-suave-merchants.vercel.app/",
     id: "2",
   },
   {
