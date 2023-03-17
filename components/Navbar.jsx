@@ -8,6 +8,7 @@ import { navItems, socials } from "../utils/Functions";
 
 const alex_brush = Alex_Brush({
   weight: "400",
+  display: "swap",
   subsets: ["latin"],
 });
 

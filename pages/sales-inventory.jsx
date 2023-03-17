@@ -14,7 +14,8 @@ const SalesInventory = () => {
       This app relieves businessmen of the hassle of tracking their inventory in realtime.
       <br />
       <br />
-      By building this, I learnt how to elegantly render pages based on roles and permissions.
+      By building this, I learnt how to elegantly render pages based on roles and permissions.<br />
+      (This is a client's private app, hence the code and URL are private).
     </>
 
   const stacks = [
