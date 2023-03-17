@@ -8,11 +8,13 @@ import { projects } from "../utils/Functions";
 
 const poppins_600 = Poppins({
   weight: "600",
+  display: "swap",
   subsets: ["latin"],
 });
 
 const poppins_400 = Poppins({
   weight: "400",
+  display: "swap",
   subsets: ["latin"],
 });
 
