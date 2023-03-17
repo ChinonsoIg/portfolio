@@ -5,6 +5,7 @@ import { socials } from "../utils/Functions";
 
 const poppins = Poppins({
   weight: "600",
+  display: "swap",
   subsets: ["latin"],
 })
 
